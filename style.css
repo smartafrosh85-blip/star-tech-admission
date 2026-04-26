@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #1a472a;
+    --secondary-color: #2d7a4d;
+    --accent-color: #63d337;
+    --light-bg: #f0f8f4;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f8f4 0%, #dbe4f0 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    font-style: italic;
+}
+nav {
+    background-color: var(--secondary-color);
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1em 1.5em;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+main {
+    padding: 3em 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3em;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+section h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    margin: 1em 0;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#apply-form {
+    background-color: var(--light-bg);
+    padding: 2em;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 4px;
+    margin: 2em 0;
+}
+
+#apply-form h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(99, 211, 55, 0.3);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-top: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 2em auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    margin-top: 3em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav a {
+        padding: 0.8em 1em;
+    }
+    
+    main {
+        padding: 1.5em 1em;
+    }
+    
+    section {
+        padding: 1.5em;
+    }
+    
+    #apply-form {
+        width: 100%;
+    }
+    
+    .slider {
+        height: 250px;
+    }
+}
