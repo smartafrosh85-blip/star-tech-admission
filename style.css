@@ -143,21 +143,72 @@ form label {
 }
 
 form input,
-form select {
+form select,
+form textarea {
     width: 100%;
     padding: 0.8em;
     margin-bottom: 1em;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1em;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 form input:focus,
-form select:focus {
+form select:focus,
+form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 5px rgba(99, 211, 55, 0.3);
+    box-shadow: 0 0 8px rgba(99, 211, 55, 0.25);
+}
+
+#application-status {
+    border-radius: 6px;
+    padding: 1em;
+    font-weight: 600;
+}
+
+.status-success {
+    background-color: #e6f7e9;
+    border: 1px solid #8ad986;
+    color: #1f5c2a;
+}
+
+.status-error {
+    background-color: #fdecea;
+    border: 1px solid #e18b8b;
+    color: #8a1f1f;
+}
+
+.status-info {
+    background-color: #f3fbff;
+    border: 1px solid #88c5ea;
+    color: #1a536d;
+}
+
+#apply-form {
+    background-color: var(--light-bg);
+    padding: 2em;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 12px;
+    margin: 2em 0;
+    max-width: 700px;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-top: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
 }
 
 button[type="submit"] {

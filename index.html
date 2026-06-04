@@ -70,20 +70,25 @@
             <h3>Application Form</h3>
             <form id="application-form">
                 <label for="name">Full Name:</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
 
-                <label for="gender">Male or Female</label>
-                <input name="gender" value=""> 
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
                 
                 <label for="email">Email Address:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="you@example.com" required>
                 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone" required>
+                <input type="tel" name="phone" id="phone" placeholder="+233 20 000 0000" required>
                 
                 <label for="program">Program:</label>
                 <select name="program" id="program" required>
-                    <option value="Select a Program">Select a Program</option>
+                    <option value="">Select a program</option>
                     <option value="KG1">KG1</option>
                     <option value="KG2">KG2</option>
                     <option value="KG3">KG3</option>
@@ -92,9 +97,10 @@
                 </select>
                 
                 <label for="message">Additional Information:</label>
-                <textarea name="message" id="message" rows="4" style="width: 100%; padding: 0.8em; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                <textarea name="message" id="message" rows="5" placeholder="Share anything important about the applicant"></textarea>
                 
                 <button type="submit">Submit Application</button>
+                <div id="application-status" aria-live="polite" style="display:none; margin-top:1em;"></div>
             </form>
         </div>
     </section>
